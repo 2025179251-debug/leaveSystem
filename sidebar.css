@@ -1,0 +1,54 @@
+/* Pastikan sidebar tidak overflow */
+.sidebar {
+  /* ... kod sedia ada ... */
+  overflow: hidden; /* Buang scrollbar pada sidebar utama */
+}
+
+/* Navigasi: Jangan paksa tinggi penuh */
+.sidebar-nav {
+  /* Buang flex: 1 jika ada */
+  margin-top: 10px;
+  overflow-y: visible; /* Biarkan dia ikut saiz kandungan */
+}
+
+/* Item Navigasi: Padat dan Ngam-ngam */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px; /* Kecilkan padding atas/bawah */
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 2px;
+  height: auto; /* Pastikan tinggi ikut kandungan */
+  min-height: 40px; /* Tinggi minimum yang selesa */
+}
+
+/* Icon: Pastikan saiz konsisten */
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Label: Pastikan line-height tidak terlalu besar */
+.nav-label {
+  font-size: 14px;
+  line-height: 1; /* Rapatkan text */
+  white-space: nowrap;
+}
+
+/* Footer: Pastikan Sign Out tidak terlalu besar */
+.sidebar-footer {
+  margin-top: auto; /* Tolak ke bawah sekali */
+  padding-top: 10px;
+}
+
+.logout-btn {
+  padding: 10px 14px !important;
+  min-height: 40px !important;
+}
